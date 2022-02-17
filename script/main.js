@@ -2,6 +2,7 @@
 const incomeInput = document.getElementById("income-in");
 
 const errorIncomExpense = document.getElementById("error-income-expense");
+const errorSaving = document.getElementById("error-saving");
 
 const expenseRentInput = document.getElementById("ex-rent-in");
 const expenseClothInput = document.getElementById("ex-cloth-in");
@@ -10,9 +11,10 @@ const totalExpense = document.getElementById("total-ex");
 const Balance = document.getElementById("balance");
 
 const CalcluteButton = document.querySelector(".cal-btn");
+const SavingButton = document.querySelector(".save-btn");
 
 const savingInput = document.getElementById("save-in");
-const savingAmount = document.getElementById("saving");
+const savingBalance = document.getElementById("saving");
 const remainingBalance = document.getElementById("remaining");
 
 
@@ -34,8 +36,25 @@ CalcluteButton.addEventListener("click", () => {
         expenseRentInput.value = "";
         expenseClothInput.value = "";
     }
+});
 
-    // console.log(expense);
+
+
+
+// Handle Saving 
+SavingButton.addEventListener("click", () => {
+    let savings = savingAmount(valueParseInt(savingInput.value));
+    let remaining = remainingAmount(savings);
+    if (remaining < 0) {
+        errorSaving.style.display = "block";
+        savingInput.innerText = "";
+    } else {
+        savingBalance.innerText = savings;
+        remainingBalance.innerText = remaining;
+        errorSaving.style.display = "none";
+        savingInput.innerText = "";
+    }
+
 });
 
 
@@ -43,7 +62,6 @@ CalcluteButton.addEventListener("click", () => {
 
 
 // Calclute expenses 
-
 function calcluteExpenses(food, rent, cloth) {
     let expense = valueParseInt(food.value) + valueParseInt(rent.value) + valueParseInt(cloth.value);
     return expense;
@@ -54,4 +72,18 @@ function calcluteExpenses(food, rent, cloth) {
 function valueParseInt(value) {
     let parseValue = parseInt(value);
     return parseValue;
+}
+
+// saving amount
+function savingAmount(percentage) {
+    let balance = valueParseInt(Balance.innerText);
+    let amount = (balance / 100) * percentage;
+    return amount;
+}
+
+// remaining balance
+function remainingAmount(savings) {
+    let balance = valueParseInt(Balance.innerText);
+    let amount = balance - savings;
+    return amount;
 }

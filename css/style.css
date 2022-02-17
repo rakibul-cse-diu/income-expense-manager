@@ -18,3 +18,8 @@ header h1{
     display: none;
     color: white;
 }
+
+#error-saving{
+    display: none;
+    color: white;
+}
