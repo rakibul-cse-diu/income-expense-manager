@@ -16,7 +16,55 @@
 
 <body>
 
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1 class="text-center">Income Expense Manager</h1>
+        </div>
+    </header>
 
+    <!-- Main section  -->
+    <main>
+        <div class="section-img">
+            <img src="./images/Financial-Budget.webp" alt="money managmennt">
+        </div>
+
+        <div class="money-manage">
+            <!-- income -->
+            <div class="income">
+                <h4>Income</h4>
+                <span>income: </span>
+                <input type="number" id="income-in">
+            </div>
+            <!-- expense -->
+            <div class="expense">
+                <h4>Expense</h4>
+                <span>food: </span>
+                <input type="number" id="ex-food-in"><br>
+
+                <span>rent: </span>
+                <input type="number" id="ex-rent-in"><br>
+
+                <span>cloths: </span>
+                <input type="number" id="ex-cloth-in"><br>
+
+                <button class="cal-btn">Calculate</button>
+
+                <h5>Total Expenses: <span id="total-ex">00</span></h5>
+                <h5>Balance: <span id="balance">00</span></h5>
+            </div>
+            <!-- savings -->
+            <div class="saving">
+                <span>Save: </span>
+                <input type="number" id="save-in">
+                <span> % </span>
+                <button class="save-btn">Save</button>
+
+                <h5>saving amount: <span id="saving">00</span></h5>
+                <h5>remaining balance: <span id="remaining">00</span></h5>
+            </div>
+        </div>
+    </main>
 
 
 
