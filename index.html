@@ -17,27 +17,28 @@
 <body>
 
     <!-- Header -->
-    <header>
+    <header class="mb-5">
         <div class="logo">
             <h1 class="text-center">Income Expense Manager</h1>
         </div>
     </header>
 
     <!-- Main section  -->
-    <main>
-        <div class="section-img">
-            <img src="./images/Financial-Budget.webp" alt="money managmennt">
+    <main class="row m-0">
+        <div class="section-img col-lg-6 col-12 col-md-6 mb-3 vh-100">
+            <img class="w-100 vh-100" src="./images/Financial-Budget.webp" alt="money managmennt">
         </div>
 
-        <div class="money-manage">
+        <div
+            class="money-manage col-lg-6 col-12 col-md-6 bg-light d-flex flex-column justify-content-center align-items-center p-5">
             <!-- income -->
-            <div class="income">
+            <div class="income mb-3">
                 <h4>Income</h4>
                 <span>income: </span>
                 <input type="number" id="income-in">
             </div>
             <!-- expense -->
-            <div class="expense">
+            <div class="expense mb-3">
                 <h4>Expense</h4>
                 <span>food: </span>
                 <input type="number" id="ex-food-in"><br>
@@ -48,7 +49,7 @@
                 <span>cloths: </span>
                 <input type="number" id="ex-cloth-in"><br>
 
-                <button class="cal-btn">Calculate</button>
+                <button class="btn btn-info cal-btn m-3">Calculate</button>
 
                 <h5>Total Expenses: <span id="total-ex">00</span></h5>
                 <h5>Balance: <span id="balance">00</span></h5>
@@ -58,7 +59,7 @@
                 <span>Save: </span>
                 <input type="number" id="save-in">
                 <span> % </span>
-                <button class="save-btn">Save</button>
+                <button class="btn btn-info save-btn">Save</button>
 
                 <h5>saving amount: <span id="saving">00</span></h5>
                 <h5>remaining balance: <span id="remaining">00</span></h5>

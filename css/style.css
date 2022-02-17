@@ -6,3 +6,9 @@ body{
 header h1{
     font-size: 2em;
 }
+
+/* Main section  */
+.money-manage h4, .money-manage h5, .money-manage span, .money-manage input{
+    margin-bottom: .5em;
+
+}
