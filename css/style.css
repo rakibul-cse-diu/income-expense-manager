@@ -12,3 +12,9 @@ header h1{
     margin-bottom: .5em;
 
 }
+
+/* error  */
+#error-income-expense{
+    display: none;
+    color: white;
+}
